@@ -1,0 +1,15 @@
+{
+  "name": "Faust",
+  "description": "Faust preset: rapid DSP prototyping with C++ wrapper for production",
+  "agents": {
+    "dsp": {
+      "skills": ["vst-creation"],
+      "mcps": ["context7"]
+    }
+  },
+  "prompts": {
+    "architect": "Hybrid approach: Faust for DSP algorithm authorship + C++ wrapper for VST3 integration. Use faust2api or manual wrapper generation. File structure: myplugin.dsp + wrapper/ (plugin + UI).",
+    "dsp": "Write DSP in Faust .dsp file. Use standard Faust libraries (stdfaust.lib). Export parameters as hslider/vslider/nentry. Use import() for modular DSP. Generate C++ via faust2api or faust2vst.",
+    "gui": "UI depends on wrapper: iPlug2 SVG if using iPlug2 wrapper, native JUCE if JUCE wrapper. Prefer Faust's built-in layout (hgroup/vgroup) for automatic parameter organization in the wrapper."
+  }
+}

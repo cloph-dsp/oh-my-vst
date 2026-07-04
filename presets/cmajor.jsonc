@@ -1,0 +1,17 @@
+{
+  "name": "Cmajor",
+  "description": "Cmajor preset: modern DSP language for Amorph platform",
+  "agents": {
+    "dsp": {
+      "mcps": ["amorph", "amorph-instrument", "amorph-midi"]
+    },
+    "gui": {
+      "mcps": ["amorph", "amorph-instrument", "amorph-midi"]
+    }
+  },
+  "prompts": {
+    "architect": "Cmajor + Amorph: single-file dsp.cmajor (processor) + index.js (UI WebComponent). Use Amorph MCP for compilation, QA probes, and draft application. Variant: fx/instrument/midi depending on plugin type.",
+    "dsp": "Cmajor conventions: processor Name, output before input endpoints, float64 for phase accumulators, processor.frequency for sample rate, no u literal suffix, no double keyword. Use struct for biquad/buffer patterns. Event handlers for MIDI. var inside loops, not let.",
+    "gui": "Light DOM WebComponent. Constructor with no args, anonymous subclass pattern for patchConnection. :host,element-name CSS. ParameterControl class. No import/export cross-file. Fixed layout with position:absolute + visibility toggle."
+  }
+}
